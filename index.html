@@ -1,36 +1,49 @@
 ---
 layout: default
-title: Immigration Compliance for Pan-African Teams
+title: Home
 ---
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>{{ site.title }}</h1>
-      <p>{{ site.description }}</p>
-      <p>
-        A borderless experience, aligned with your immigration needs.
-      </p>
-      <p>
-        <a href="https://www.myodyssey.so" target="_blank" rel="noopener">
-          Learn more about Odyssey →
-        </a>
-      </p>
-    </div>
-    <div class="hero-image">
-      <img 
-        src="https://images.unsplash.com/photo-1588878029776-91133d378024?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-        alt="Diverse professional team collaborating across Africa"
-        loading="lazy"
-      >
-    </div>
-  </div>
-</section>
+<style>
+.navbar {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #202225;
+}
+</style>
 
-<section class="main-content">
-  <div class="container">
-    <p>
-      Trusted by forward-thinking companies navigating African work visas, permits, and compliance.
-    </p>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">Odyssey Africa</div>
+    <ul class="nav-links">
+      <li><a href="https://myodyssey.so">Resources</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/blogs">Blogs</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+    </ul>
   </div>
-</section>
+</nav>
+
+<div class="hero">
+  <div class="container">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
+</div>
