@@ -1,4 +1,19 @@
-title: Your Immigration Compliance Platform for Teams Working Across Africa
-description: Seamlessly immigrate teams for work through compliance automation and local legal expert support.
+title: Odyssey Africa
+email: derrick@myodyssey.africa
+description: Your immigration compliance platform for teams working across Africa.
+baseurl: ""
+url: "https://myodyssey.africa"
+
+# Build settings
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalinks
+permalink: /blogs/:title/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
