@@ -2,18 +2,4 @@ title: Odyssey Africa
 email: derrick@myodyssey.africa
 description: Your immigration compliance platform for teams working across Africa.
 baseurl: ""
-url: "https://myodyssey.africa"
-
-# Build settings
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# Permalinks
-permalink: /blogs/:title/
-
-# Exclude from processing
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
+url: "https://myodyssey.africa"  # Fixed - removed extra spaces
