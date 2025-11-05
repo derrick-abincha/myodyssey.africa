@@ -1,6 +1,4 @@
-theme: jekyll-theme-minimal
 title: Your Immigration Compliance Platform for Teams Working Across Africa
 description: Seamlessly immigrate teams for work through compliance automation and local legal expert support.
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
