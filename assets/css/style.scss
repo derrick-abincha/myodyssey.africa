@@ -1,14 +1,16 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Merriweather+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Merriweather+Sans:wght@600;700&display=swap');
 
 :root {
   --bg: #fffefe;
   --text: #202225;
   --primary: #7189ff;
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --font-heading: 'Merriweather Sans', system-ui, sans-serif;
+  --border: #eaeaea;
+  --shadow: rgba(0,0,0,0.08);
+  --font-body: 'DM Sans', sans-serif;
+  --font-heading: 'Merriweather Sans', sans-serif;
 }
 
 * {
@@ -17,87 +19,159 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
   font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* ===== HERO ===== */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 4rem 0;
+/* ===== NAVBAR ===== */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 10px var(--shadow);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.hero-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.hero-image {
-  flex: 1;
-  min-width: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero h1 {
+.nav-brand a {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
-  margin: 0 0 1rem;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--primary);
+  text-decoration: none;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  margin: 0 0 1.5rem;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
 }
 
-/* ===== MAIN CONTENT ===== */
-.main-content {
-  padding: 2rem 0 4rem;
-  text-align: center;
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
+.nav-links a:hover {
+  color: var(--primary);
+}
+
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
+}
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+/* ===== PAGE STYLING ===== */
+.page-container,
+.post-container {
+  padding: 3rem 0;
+}
 
-  .hero p {
-    font-size: 1.1rem;
-  }
+.page-container h1,
+.post-container h1 {
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+}
+
+/* ===== BLOG LIST ===== */
+.blog-card {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-card h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.blog-card h3 a:hover {
+  color: var(--primary);
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* ===== FORM ===== */
+.contact-form {
+  max-width: 600px;
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.form-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #f9f9fb;
+  padding: 2.5rem 0 1.5rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer .container {
+  text-align: center;
+  color: #555;
+}
+
+.footer a {
+  color: var(--primary);
 }
