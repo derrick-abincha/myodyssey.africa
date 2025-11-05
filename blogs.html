@@ -1,0 +1,19 @@
+---
+layout: page
+title: Blogs
+permalink: /blogs/
+---
+
+{% if site.posts.size == 0 %}
+  <p>No blog posts yet.</p>
+{% else %}
+  <div class="blog-list">
+    {% for post in site.posts %}
+      <article class="blog-card">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}
